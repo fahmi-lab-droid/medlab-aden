@@ -1,0 +1,201 @@
+/* ================== GENERAL ================== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #f5f8fb;
+    color: #333;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.logo {
+    height: 60px;
+}
+
+nav {
+    background: #0B6E99;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover, nav a.active {
+    color: #FFD24C;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 40px;
+    color: #0B6E99;
+}
+
+/* ================== SERVICES & CARDS ================== */
+.services, .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.service-box, .card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.service-box img, .card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.service-box img:hover, .card img:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* ================== BUTTONS ================== */
+button {
+    background: #0B6E99;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #FFD24C;
+    color: black;
+}
+
+/* ================== GALLERY ================== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* ================== FOOTER ================== */
+footer {
+    background: #083a55;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+/* ================== WHATSAPP FLOAT ================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 50%;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+/* ================== CLINIC BOOKING FORM ================== */
+.booking-form {
+    max-width: 500px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.booking-form input, .booking-form select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.booking-form button {
+    align-self: center;
+}
+
+/* ================== DOCTOR PREVIEW ================== */
+.doctor-preview {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.doctor-preview img {
+    width: 200px;
+    height: 250px;
+    object-fit: contain; /* ensures photo is not cropped */
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.doctor-preview h3 {
+    margin: 5px 0;
+}
+
+.doctor-preview p {
+    margin: 0;
+    font-weight: bold;
+    color: #0B6E99;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 600px) {
+    .doctor-preview img {
+        width: 150px;
+        height: 200px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clinic Booking | حجز العيادة</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<style>
+/* Doctor image preview at the top of form */
+.doctor-preview {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.doctor-preview img {
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<h2 class="section-title" data-en="Book Clinic Appointment" data-ar="حجز موعد العيادة">Book Clinic Appointment</h2>
+
+<!-- Doctor preview -->
+<div class="doctor-preview" id="doctorPreview">
+  <img src="images/dr_samih.jpg" alt="Doctor Photo" id="doctorPhoto">
+  <h3 id="doctorName">Dr. Samih Al-Qasim</h3>
+  <p id="doctorSpecialty">Internal Medicine & Endocrinology | الطب الباطني والغدد الصماء</p>
+</div>
+
+<form class="booking-form" onsubmit="return sendBooking(this)">
+
+<label data-en="Patient Name" data-ar="اسم المريض">Patient Name</label>
+<input type="text" name="name" required>
+
+<label data-en="Phone" data-ar="رقم الهاتف">Phone</label>
+<input type="text" name="phone" required>
+
+<label data-en="Doctor" data-ar="الطبيب">Doctor</label>
+<select name="doctor" id="doctorSelect">
+  <option value="Samih" data-en="Dr. Samih Al-Qasim - Internal Medicine & Endocrinology" data-ar="د. سامح القاسم - الطب الباطني والغدد الصماء" data-photo="images/dr_samih.jpg">Dr. Samih Al-Qasim</option>
+  <option value="Ali" data-en="Prof. Dr. Ali Muhammad Al-Saqqaf - Nephrology & Urology" data-ar="البروفيسور د. علي محمد السقاف - أمراض الكلى والمسالك البولية" data-photo="images/dr_ali.jpg">Prof. Dr. Ali Muhammad Al-Saqqaf</option>
+  <option value="Lina" data-en="Dr. Lina Ghaleb - Internal Medicine & Kidney Diseases" data-ar="د. لينا غالب - الباطنية وأمراض الكلى" data-photo="images/dr_lina.jpg">Dr. Lina Ghaleb</option>
+  <option value="Marina" data-en="Dr. Marina Al-Houthari - Obstetrics & Gynecology" data-ar="الدكتورة مارينا الحوثري - النساء والتوليد" data-photo="images/dr_marina.jpg">Dr. Marina Al-Houthari</option>
+  <option value="Basil" data-en="Dr. Basil Al-Qadi - Pediatrics & Neonatology" data-ar="د. باسل القاضي - طب الأطفال وحديثي الولادة" data-photo="images/dr_basil.jpg">Dr. Basil Al-Qadi</option>
+  <option value="Afaf" data-en="Dr. Afaf Muhammad Saeed - Orthopedic Surgery & Rheumatism" data-ar="د. عفاف محمد سعيد - جراحة العظام والمفاصل وأمراض الروماتيزم" data-photo="images/dr_afaf.jpg">Dr. Afaf Muhammad Saeed</option>
+  <option value="Faten" data-en="Dr. Faten Al-Breiki - Obstetrics, Gynecology & Infertility" data-ar="د. فاتن البريكي - النساء والتوليد والعقم" data-photo="images/dr_faten.jpg">Dr. Faten Al-Breiki</option>
+</select>
+
+<label data-en="Date" data-ar="التاريخ">Date</label>
+<input type="date" name="date" required>
+
+<label data-en="Time" data-ar="الوقت">Time</label>
+<input type="time" name="time" required>
+
+<input type="hidden" name="test" value="Clinic Appointment">
+
+<button type="submit" data-en="Book Appointment" data-ar="حجز الموعد">Book Appointment</button>
+
+</form>
+
+<script>
+// Load language
+window.onload = function() {
+    let savedLang = localStorage.getItem("lang");
+    if(savedLang){
+        setLang(savedLang);
+    } else {
+        setLang("en");
+    }
+
+    const select = document.getElementById('doctorSelect');
+    const doctorParam = new URLSearchParams(window.location.search).get('doctor');
+    if(doctorParam){
+        for(let i=0; i<select.options.length; i++){
+            if(select.options[i].value === doctorParam){
+                select.selectedIndex = i;
+                break;
+            }
+        }
+    }
+    updateDoctorPreview();
+}
+
+// Update doctor preview when selection changes
+document.getElementById('doctorSelect').addEventListener('change', updateDoctorPreview);
+
+function updateDoctorPreview(){
+    const select = document.getElementById('doctorSelect');
+    const option = select.options[select.selectedIndex];
+    const photo = option.getAttribute('data-photo');
+    const enText = option.getAttribute('data-en');
+    const arText = option.getAttribute('data-ar');
+
+    const lang = document.documentElement.lang || 'en';
+
+    document.getElementById('doctorPhoto').src = photo;
+    document.getElementById('doctorName').textContent = lang==='ar' ? arText.split(' - ')[0] : enText.split(' - ')[0];
+    document.getElementById('doctorSpecialty').textContent = lang==='ar' ? arText.split(' - ')[1] : enText.split(' - ')[1];
+}
+</script>
+
+</body>
+</html>

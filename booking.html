@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Test</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+
+<section>
+
+<h2 class="section-title">Book Laboratory Test</h2>
+
+<form onsubmit="return sendBooking(this)">
+
+<input type="text" name="name" placeholder="Full Name" required>
+
+<input type="text" name="phone" placeholder="Phone / WhatsApp" required>
+
+<select name="test">
+
+<option>CBC</option>
+<option>CMP</option>
+<option>BMP</option>
+<option>Lipid Profile</option>
+<option>TSH</option>
+<option>HbA1c</option>
+<option>Iron Study</option>
+<option>PSA</option>
+
+</select>
+
+<select name="doctor">
+
+<option>Dr Ahmed – Hematology</option>
+<option>Dr Fatima – Microbiology</option>
+<option>Dr Ali – Clinical Chemistry</option>
+
+</select>
+
+<input type="date" name="date" required>
+
+<button type="submit">Send Booking via WhatsApp</button>
+
+</form>
+
+</section>
+
+</body>
+</html>

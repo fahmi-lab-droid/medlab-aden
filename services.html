@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | MedLab Aden</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Roboto', sans-serif; margin:0; padding:0; }
+body[dir="rtl"] { font-family: 'Cairo', sans-serif; }
+nav a.active { color: #28a745; }
+.services, .cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+.service-box, .card { border:1px solid #ddd; border-radius:8px; padding:15px; text-align:center; width:250px; }
+.card img { width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:10px; }
+button { background-color:#28a745; color:white; border:none; padding:8px 12px; cursor:pointer; border-radius:5px; }
+button:hover { background-color:#218838; }
+.section-title { text-align:center; margin:30px 0 20px 0; }
+</style>
+</head>
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="vision.html">Vision</a>
+<a href="services.html" class="active">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+<a href="about.html">About</a>
+</nav>
+
+<!-- LAB SERVICES -->
+<section>
+<h2 class="section-title">Laboratory Services | خدمات المختبر</h2>
+<div class="services">
+<div class="service-box"><h3>Hematology | فحوصات الدم</h3></div>
+<div class="service-box"><h3>Clinical Chemistry | الكيمياء السريرية</h3></div>
+<div class="service-box"><h3>Microbiology | الأحياء الدقيقة</h3></div>
+<div class="service-box"><h3>Hormone Analysis | تحاليل الهرمونات</h3></div>
+<div class="service-box"><h3>Immunology | علم المناعة</h3></div>
+<div class="service-box"><h3>Molecular Biology (PCR) | البيولوجيا الجزيئية</h3></div>
+<div class="service-box"><h3>Serology | الأمصال</h3></div>
+<div class="service-box"><h3>Coagulation Tests | تخثر الدم</h3></div>
+<div class="service-box"><h3>Tumor Markers | دلالات الأورام</h3></div>
+<div class="service-box"><h3>Urinalysis | تحليل البول</h3></div>
+<div class="service-box"><h3>Stool Analysis | تحليل البراز</h3></div>
+</div>
+</section>
+
+<!-- LAB TESTS -->
+<section>
+<h2 class="section-title">Laboratory Tests | حجز التحاليل</h2>
+<div class="cards">
+<!-- Add lab test cards as before -->
+<div class="card"><h3>CBC</h3><p>Complete Blood Count</p><button onclick="location.href='booking.html?test=CBC'">Book</button></div>
+<div class="card"><h3>Comprehensive Metabolic Panel</h3><button onclick="location.href='booking.html?test=CMP'">Book</button></div>
+<div class="card"><h3>Basic Metabolic Panel</h3><button onclick="location.href='booking.html?test=BMP'">Book</button></div>
+<div class="card"><h3>Lipid Profile</h3><button onclick="location.href='booking.html?test=Lipid'">Book</button></div>
+<div class="card"><h3>TSH Thyroid Test</h3><button onclick="location.href='booking.html?test=TSH'">Book</button></div>
+<div class="card"><h3>HbA1c Diabetes</h3><button onclick="location.href='booking.html?test=HbA1c'">Book</button></div>
+<div class="card"><h3>Iron Studies</h3><button onclick="location.href='booking.html?test=Iron'">Book</button></div>
+<div class="card"><h3>PSA Test</h3><button onclick="location.href='booking.html?test=PSA'">Book</button></div>
+<div class="card"><h3>Urinalysis</h3><button onclick="location.href='booking.html?test=Urinalysis'">Book</button></div>
+<div class="card"><h3>Vitamin D</h3><button onclick="location.href='booking.html?test=VitaminD'">Book</button></div>
+<div class="card"><h3>Ferritin</h3><button onclick="location.href='booking.html?test=Ferritin'">Book</button></div>
+<div class="card"><h3>CRP</h3><button onclick="location.href='booking.html?test=CRP'">Book</button></div>
+<div class="card"><h3>Liver Function Test</h3><button onclick="location.href='booking.html?test=LFT'">Book</button></div>
+<div class="card"><h3>Kidney Function Test</h3><button onclick="location.href='booking.html?test=KFT'">Book</button></div>
+</div>
+</section>
+
+<!-- CLINIC SERVICES -->
+<section>
+<h2 class="section-title">Clinic Services | خدمات العيادة</h2>
+<div class="services">
+<div class="service-box"><h3>Internal Medicine & Endocrinology | الطب الباطني والغدد الصماء</h3></div>
+<div class="service-box"><h3>Nephrology & Urology | أمراض الكلى والمسالك البولية</h3></div>
+<div class="service-box"><h3>Internal Medicine & Kidney Diseases | الباطنية وأمراض الكلى</h3></div>
+<div class="service-box"><h3>Obstetrics & Gynecology | النساء والتوليد</h3></div>
+<div class="service-box"><h3>Pediatrics & Neonatology | طب الأطفال وحديثي الولادة</h3></div>
+<div class="service-box"><h3>Orthopedic Surgery & Rheumatism | جراحة العظام والمفاصل وأمراض الروماتيزم</h3></div>
+<div class="service-box"><h3>Obstetrics, Gynecology & Infertility | النساء والتوليد والعقم</h3></div>
+</div>
+</section>
+
+<!-- DOCTORS -->
+<section>
+<h2 class="section-title">Our Doctors | أطباؤنا</h2>
+<div class="cards">
+<div class="card"><img src="images/dr_samih.jpg" alt="Dr. Samih Al-Qasim"><h3>Dr. Samih Al-Qasim</h3><p>Internal Medicine & Endocrinology | الطب الباطني والغدد الصماء</p><button onclick="location.href='book-clinic.html?doctor=Samih'">Book</button></div>
+<div class="card"><img src="images/dr_ali.jpg" alt="Prof. Dr. Ali Muhammad Al-Saqqaf"><h3>Prof. Dr. Ali Muhammad Al-Saqqaf</h3><p>Nephrology & Urology | أمراض الكلى والمسالك البولية</p><button onclick="location.href='book-clinic.html?doctor=Ali'">Book</button></div>
+<div class="card"><img src="images/dr_lina.jpg" alt="Dr. Lina Ghaleb"><h3>Dr. Lina Ghaleb</h3><p>Internal Medicine & Kidney Diseases | الباطنية وأمراض الكلى</p><button onclick="location.href='book-clinic.html?doctor=Lina'">Book</button></div>
+<div class="card"><img src="images/dr_marina.jpg" alt="Dr. Marina Al-Houthari"><h3>Dr. Marina Al-Houthari</h3><p>Obstetrics & Gynecology | النساء والتوليد</p><button onclick="location.href='book-clinic.html?doctor=Marina'">Book</button></div>
+<div class="card"><img src="images/dr_basil.jpg" alt="Dr. Basil Al-Qadi"><h3>Dr. Basil Al-Qadi</h3><p>Pediatrics & Neonatology | طب الأطفال وحديثي الولادة</p><button onclick="location.href='book-clinic.html?doctor=Basil'">Book</button></div>
+<div class="card"><img src="images/dr_afaf.jpg" alt="Dr. Afaf Muhammad Saeed"><h3>Dr. Afaf Muhammad Saeed</h3><p>Orthopedic Surgery & Rheumatism | جراحة العظام والمفاصل وأمراض الروماتيزم</p><button onclick="location.href='book-clinic.html?doctor=Afaf'">Book</button></div>
+<div class="card"><img src="images/dr_faten.jpg" alt="Dr. Faten Al-Breiki"><h3>Dr. Faten Al-Breiki</h3><p>Obstetrics, Gynecology & Infertility | النساء والتوليد والعقم</p><button onclick="location.href='book-clinic.html?doctor=Faten'">Book</button></div>
+</div>
+</section>
+
+<footer>
+&copy; 2026 MedLab Aden | مختبرات مدلاب عدن التخصصية
+</footer>
+
+</body>
+</html>
